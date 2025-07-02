@@ -13,9 +13,12 @@ let animationId = null;
 let isGrowing = false;
 let isShrinking = false;
 
-
 Poop.style.display = "none";
 Poop2.style.display = "none";
+
+element.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
 
 function animateGrow() {
   if (currentSize >= maxSize) {
